@@ -1,6 +1,8 @@
-echo "# Sonic-Pi-Scripts" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/giovanniruiz11/Sonic-Pi-Scripts.git
-git push -u origin master
+x= 21 #x starts at 21
+87 .times do #the loop repeats 87 times
+  play(x)
+  x=(x+1) #add 1 to x
+  sleep 1 #stop for 1 second 
+end
+
+sample :ambi_plano #this is the sound im playing
