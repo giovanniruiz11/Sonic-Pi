@@ -1,3 +1,6 @@
+# Welcome to Sonic Pi v2.11.1
+
+use_bpm 178
 use_synth :fm
 use_synth_defaults sustain: 0.25
 
@@ -12,4 +15,9 @@ live_loop :white_stripes do
     index = index + 1
   end
   index = 0
+end
+
+live_loop :drums do
+  sample :loop_amen, beat_stretch:4
+  sleep 4
 end
