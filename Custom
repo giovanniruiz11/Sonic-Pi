@@ -2,13 +2,12 @@
 
 use_bpm 178
 use_synth :fm
-use_synth_defaults sustain: rrand(0.25, 0.3)
+use_synth_defaults sustain: rrand(0.25, 0.3) #randimizes the sustainablity 
 
 slow_notes = [:A4, :r,:E4, :A4, :B4, :C5, :D5, :C5, :B4, :A4, :G4, :F4, :A4, :C5, :r, :G4, :C5, :G4, :C5, :G4, :C4, :D5, :B4, :r] #this is all the notes needed to be played in this order
 slow_sleeps =[2, 0.5, 0.5, 0.5, 0.5, 0.75, 0.75, 0.5, 0.75, 0.75, 0.5, 1.5, 0.5, 4, 2, 1, 1, 1, 1, 1, 1, 1, 0.5, 1.5, 3] #this is all the sleeps needed to be slept in this order
 index=0
-
-live_loop :white_stripes do
+define :ahh3 do
   20. times do
     play slow_notes[index] #works kinda like a div in how you name the div smething and tell that div what to do
     sleep slow_sleeps[index]
@@ -17,7 +16,6 @@ live_loop :white_stripes do
   index = 0
 end
 
-live_loop :drums do
-  sample :loop_amen, beat_stretch:4
-  sleep 4
+live_loop :eh do
+  ahh3
 end
